@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Quarto output
+_site/
+.quarto/
+*_cache/
+*_files/
