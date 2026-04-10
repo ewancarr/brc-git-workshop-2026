@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercises — Hour 2 – Git workshop · NIHR Maudsley BRC</title>
+<title>Exercises — Hour 2 – Git and GitHub</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -77,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7fde21fbbed941212ff23fc867eda995.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3fadc6c40564baed3ffd0f9ff71109e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-53d6c29dcf2f79cc6dfaacf0dc2dd3c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -117,10 +117,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Git workshop · NIHR Maudsley BRC</span>
+    <span class="navbar-title">Git and GitHub</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -137,6 +136,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link active" href="./exercises.html" aria-current="page"> 
 <span class="menu-text">Exercises</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.maudsleybrc.nihr.ac.uk"> 
+<span class="menu-text">NIHR Maudsley BRC</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -160,7 +165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ex2" id="toc-ex2" class="nav-link" data-scroll-target="#ex2">Exercise 2 · Push to GitHub</a></li>
   <li><a href="#ex3" id="toc-ex3" class="nav-link" data-scroll-target="#ex3">Exercise 3 · The everyday loop</a></li>
   <li><a href="#ex4" id="toc-ex4" class="nav-link" data-scroll-target="#ex4">Exercise 4 · Branches <em>(stretch — if you have time)</em></a></li>
-  <li><a href="#finale" id="toc-finale" class="nav-link" data-scroll-target="#finale">Collaborative finale · Add your name</a></li>
+  <li><a href="#collaborative-exercise-add-your-name" id="toc-collaborative-exercise-add-your-name" class="nav-link" data-scroll-target="#collaborative-exercise-add-your-name">Collaborative exercise · Add your name</a></li>
   </ul>
 </nav>
     </div>
@@ -187,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>These exercises take you from zero to a working Git-and-GitHub setup on your own machine. Work through them in order. Each one builds on the last, but the <strong>collaborative finale</strong> at the end is self-contained — even if you get stuck earlier, you can still join in.</p>
+<p>These exercises take you from zero to a working Git-and-GitHub setup on your own machine. Work through them in order. Each one builds on the last, but the <strong>collaborative exercise</strong> at the end is self-contained — even if you get stuck earlier, you can still join in.</p>
 <p>If you get stuck at any point, raise your hand, and we’ll come and help.</p>
 <hr>
 <section id="before-you-start" class="level2">
@@ -197,6 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Git installed</strong> — open a terminal and run <code>git --version</code>. You should see a version number.</li>
 <li><strong>A GitHub account</strong> — if not, create one at <a href="https://github.com">github.com</a></li>
 <li><strong>GitHub Desktop installed</strong> (recommended for beginners) — <a href="https://desktop.github.com">desktop.github.com</a></li>
+<li><strong>If you’re following the command-line route:</strong> install the <strong>GitHub CLI</strong> (<code>gh</code>) as described on the <a href="./setup.html#github-desktop">setup page</a></li>
 <li><strong>The example project folder</strong> — download <a href="example.zip"><code>example.zip</code></a>, unzip it somewhere you can find it (e.g.&nbsp;your Desktop). It contains a small R project: a dataset, three scripts, and a README.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -254,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You should see something like <code>git version 2.44.0</code>.</p></li>
 <li><p>Check you’re authenticated with GitHub:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If you see <code>Logged in to github.com</code>, you’re ready. If not, run:</p>
+<p>If you get <code>gh: command not found</code>, go back to the <a href="./setup.html#github-desktop">setup page</a> and install the GitHub CLI first. If you see <code>Logged in to github.com</code>, you’re ready. If not, run:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>and follow the prompts.</p></li>
 </ol>
@@ -549,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ex4" class="level2">
 <h2 class="anchored" data-anchor-id="ex4">Exercise 4 · Branches <em>(stretch — if you have time)</em></h2>
-<p>This exercise is for people who’ve finished Exercises 1–3 and want to go further. There’s no pressure to complete it before the finale.</p>
+<p>This exercise is for people who’ve finished Exercises 1–3 and want to go further. There’s no pressure to complete it before the collaborative exercise.</p>
 <p>Branches let you try something out without touching your working code. You create a branch, make changes there, and — when you’re happy — merge it back into <code>main</code>.</p>
 <section id="step-1-create-a-branch" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-create-a-branch">Step 1: Create a branch</h3>
@@ -632,8 +638,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="finale" class="level2">
-<h2 class="anchored" data-anchor-id="finale">Collaborative finale · Add your name</h2>
+<section id="collaborative-exercise-add-your-name" class="level2">
+<h2 class="anchored" data-anchor-id="collaborative-exercise-add-your-name">Collaborative exercise · Add your name</h2>
 <p><em>~20 minutes · 15:40–16:00</em></p>
 <p>Everyone is going to contribute to a shared repository. This is exactly how open-source collaboration works.</p>
 <p>The repo is at: <strong><a href="https://github.com/ewancarr/brc-git-workshop-2026">github.com/ewancarr/brc-git-workshop-2026</a></strong></p>
