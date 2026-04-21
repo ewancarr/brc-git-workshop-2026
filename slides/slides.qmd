@@ -54,7 +54,7 @@ format:
 ---
 
 ::: {.center style="font-size: 2.2em; line-height: 1.6; text-align: center; max-width: 80%; margin: 0 auto;"}
-**Git is software that tracks changes to your files.**
+Git is ***software*** that ***tracks changes*** to your files.
 :::
 
 ---
