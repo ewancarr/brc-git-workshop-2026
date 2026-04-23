@@ -2,5 +2,7 @@
 
 Add your name below during the collaborative exercise.
 
-- Ewan Carr
-- Hassan Jafari
+* Ewan Carr
+* Hassan Jafari
+* Julia Griem
+
