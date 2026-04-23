@@ -14,3 +14,5 @@ Slides: [ewancarr.github.io/brc-git-workshop-2026/slides/slides.html](https://ew
 ## Collaborative exercise
 
 During the session, participants will fork this repository, add their name to [`names.md`](names.md), and open a pull request.
+
+## Test
