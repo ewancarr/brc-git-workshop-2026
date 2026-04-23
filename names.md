@@ -3,7 +3,7 @@
 Add your name below during the collaborative exercise.
 
 * Ewan Carr
-* Marko
-
 - Ewan Carr
+- Camille Welcome Chamberlain
 - Hassan Jafari
+- Marko
