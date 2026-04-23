@@ -110,7 +110,7 @@ format:
 ::: {.survey-stat .survey-accent}
 55%
 :::
-[said the main blocker was not knowing where to start]{.survey-label}
+[main blocker is not knowing where to start]{.survey-label}
 :::
 :::
 :::
