@@ -4,3 +4,4 @@ Add your name below during the collaborative exercise.
 
 - Ewan Carr
 - Hassan Jafari
+- Eliot Kerdreux
